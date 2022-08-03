@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body class="bg-slate-50">
+    <div
+      class="container mx-auto text-center p-5 flex justify-center items-center h-screen"
+    >
+      <div
+        class="h-1/2 bg flex items-center bg-white w-1/2 justify-center rounded-lg shadow-md"
+      >
+        <div>
+          <input
+            type="number"
+            name="number"
+            id="price"
+            class="border border-blue-400 rounded px-4 py-2"
+            placeholder="Enter Price"
+            required
+          />
+          <button
+            type="submit"
+            id="btn"
+            class="ml-2 py-2 px-3 bg-blue-500 rounded font-medium uppercase text-white hover:bg-blue-500/80"
+          >
+            Submit
+          </button>
+
+          <p
+            id="suggest"
+            class="text-2xl mt-20 font-medium text-white p-2 bg-blue-500 rounded-md capitalize"
+          >
+            Please enter your Budget to get a suggestion
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var inputPrice = document.getElementById("price");
+      var suggest = document.getElementById("suggest");
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", myfun);
+      function myfun() {
+        var priceis = inputPrice.value;
+        if (priceis > 80000) {
+          suggest.innerHTML = "Macbook kino, boroloker pola";
+        } else if (priceis > 60000 && priceis <= 80000) {
+          suggest.innerHTML = "GAMING laptop kin";
+        } else if (priceis > 40000 && priceis <= 60000) {
+          suggest.innerHTML = "Pc build kor vai";
+        } else if (priceis > 10000 && priceis <= 40000) {
+          suggest.innerHTML = "Vangarir dokane jao laptop nite";
+        } else if (priceis > 0 && priceis <= 10000) {
+          suggest.innerHTML = "Bro, you are broke";
+        } else {
+          suggest.innerHTML = "Kotha kow moyna";
+        }
+      }
+    </script>
+  </body>
+</html>
