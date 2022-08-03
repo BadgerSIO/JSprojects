@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#sectionOne {
+  height: 100vh;
+  width: 100vw;
+  background-color: #31ff3131;
+}
+.container {
+  width: 1300px;
+
+  height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mainContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainContent h2 {
+  font-size: 50px;
+  text-transform: capitalize;
+  padding: 20px 10px;
+  text-shadow: 2px 2px 2px #ce5937;
+}
+.mainContent #changeclr {
+  padding: 20px 50px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #ce5937;
+  text-shadow: 2px 2px 2px #000;
+  border: 0;
+  color: #fff;
+  margin-top: 50px;
+  transition: 0.2s;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.mainContent #changeclr:hover {
+  cursor: pointer;
+  box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+}
+
+#hexcolor {
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px 60px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+#copybtn {
+  text-align: center;
+  margin-left: 10px;
+  padding: 15px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#copybtn:hover {
+  cursor: pointer;
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.toastmsg {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  padding: 20px 20px;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: aquamarine;
+  font-size: 16px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.toastmsg_slide_in {
+  animation: tstslidein 0.5s ease-in-out;
+}
+.toastmsg_slide_out {
+  animation: tstslideout 0.5s ease-in-out;
+}
+
+@keyframes tstslidein {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes tstslideout {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
